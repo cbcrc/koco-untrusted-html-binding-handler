@@ -1,0 +1,12 @@
+{
+    "en": {
+        "koco-untrusted-html-binding-handler": {
+            "defaultText": "Content has no title"
+        }
+    },
+    "fr": {
+        "koco-untrusted-html-binding-handler": {
+            "defaultText": "Contenu sans titre"
+        }
+    }
+}
