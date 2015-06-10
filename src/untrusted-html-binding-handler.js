@@ -5,13 +5,13 @@ define(['knockout', 'jquery', 'koco-i18next'],
         ko.bindingHandlers.untrustedHtml = {
             update: function(element, valueAccessor, allBindingsAccessor) {
                 var value = ko.unwrap(valueAccessor());
-                
-                var defaultText = this.kocoI18next.i18next.t('koco-untrusted-html-binding-handler.defaultText');
+                var i18next = kocoI18next.i18next;
+                var defaultText = i18next.t('koco-untrusted-html-binding-handler.defaultText');
                 var defaultSettings = {
                     defaultText: '[' + defaultText + ']'
                 };
 
-                var settings = $.extend({}, defaultSettings, allBindingsAccessor().htmlTitleSettings);
+                var settings = $.extend({}, defaultSettings, allBindingsAccessor().utHtmlSettings);
 
                 ko.bindingHandlers.html.update(element,
                     function() {
