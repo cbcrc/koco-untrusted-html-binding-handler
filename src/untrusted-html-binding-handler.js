@@ -13,6 +13,7 @@ define(['knockout', 'jquery', 'koco-i18next'],
 
                 var settings = $.extend({}, defaultSettings, allBindingsAccessor().utHtmlSettings);
 
+                // @TODO give client more sanitization options
                 ko.bindingHandlers.html.update(element,
                     function() {
                         return value ? value.replace(/&nbsp;/gi, ' ').trim() : settings.defaultTitle;
