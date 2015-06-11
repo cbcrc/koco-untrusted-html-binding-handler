@@ -1,5 +1,5 @@
-define(['knockout', 'jquery', 'koco-i18next'],
-    function(ko, $, kocoI18next) {
+define(['knockout', 'jquery', 'string-utilities', 'koco-i18next'],
+    function(ko, $, stringUtilities, kocoI18next) {
         'use strict';
 
         ko.bindingHandlers.untrustedHtml = {
@@ -13,10 +13,12 @@ define(['knockout', 'jquery', 'koco-i18next'],
 
                 var settings = $.extend({}, defaultSettings, allBindingsAccessor().utHtmlSettings);
 
-                // @TODO give client more sanitization options
                 ko.bindingHandlers.html.update(element,
                     function() {
-                        return value ? value.replace(/&nbsp;/gi, ' ').trim() : settings.defaultTitle;
+                        var su = stringUtilities;
+                        var santitizedValue = value ? su.stripHtmlFromText(value) : settings.defaultTitle;
+                        var trimmedValue = su.trimRight(santitizedValue);
+                        return trimmedValue;
                     });
             }
         };
