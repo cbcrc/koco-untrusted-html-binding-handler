@@ -8,12 +8,12 @@ bower install koco-untrusted-html-binding-handler
 
 ## Usage with KOCO
 
-This is a shared module that is used in many other module. The convention is to configure an alias in the `require.configs.js` with the name `untrusted-html-binding-handler` like so:
+This is a shared module that is used in many other module. Per convention, add this binding handler to your knockout-binding-handlers.js like so:
 
 ```javascript
-paths: {
+define([
   ...
-  'untrusted-html-binding-handler' : 'bower_components/koco-untrusted-html-binding-handler/src/untrusted-html-binding-handler'
+        'bower_components/koco-untrusted-html-binding-handler/src/untrusted-html-binding-handler',
   ...
-}
+]
 ```
