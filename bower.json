@@ -1,0 +1,30 @@
+{
+  "name": "koco-untrusted-html-binding-handler",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cbcrc/koco-untrusted-html-binding-handler",
+  "authors": [
+    "David D'Amico <david.damico@cbc.ca>"
+  ],
+  "description": "Set node html with a value you are not sure is safe.",
+  "main": "untrusted-html-binding-handler.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "koco"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "knockout": "^3.2.0",
+    "koco-string-utilities": "^0.1.7",
+    "koco-i18next": "^0.2.2"
+  }
+}
