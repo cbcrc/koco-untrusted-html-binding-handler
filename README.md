@@ -5,6 +5,7 @@ Knockout binding handler like html, but for html you don't trust!
 
 ```bash
 bower install koco-untrusted-html-binding-handler
+```
 
 ## Usage with KOCO
 
