@@ -18,3 +18,9 @@ define([
   ...
 ]
 ```
+
+Usage looks like this:
+
+```html
+    <span data-bind="untrustedHtml: { text: 'my untrusted&nbsp;fragment', settings: { defaultText: 'my default text' } }"></span>
+```
