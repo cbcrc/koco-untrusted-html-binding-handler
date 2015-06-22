@@ -1,5 +1,5 @@
-define(['knockout', 'jquery', 'string-utilities', 'koco-i18next'],
-    function(ko, $, stringUtilities, kocoI18next) {
+define(['knockout', 'jquery', 'string-utilities', 'i18next'],
+    function(ko, $, stringUtilities, i18n) {
         'use strict';
 
         ko.bindingHandlers.untrustedHtml = {
@@ -8,7 +8,6 @@ define(['knockout', 'jquery', 'string-utilities', 'koco-i18next'],
                 var value = ko.unwrap(valueAccessor());
                 var incomingSettings = value.settings;
                 
-                var i18n = kocoI18next.i18next;
                 var defaultSettings = {
                     defaultText: i18n.t('koco-untrusted-html-binding-handler.defaultText')
                 };
