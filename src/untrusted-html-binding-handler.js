@@ -16,7 +16,8 @@ define(['knockout', 'jquery', 'string-utilities', 'i18next'],
                 ko.bindingHandlers.html.update(element,
                     function() {
                         var su = stringUtilities;
-                        var santitizedValue = value.text ? su.stripHtmlFromText(value.text) : settings.defaultText;
+                        var text = ko.unwrap(value.text);
+                        var santitizedValue = text ? su.stripHtmlFromText(text) : settings.defaultText;
                         var trimmedValue = su.trimRight(santitizedValue);
                         return trimmedValue;
                     });
