@@ -1,6 +1,6 @@
 {
   "name": "koco-untrusted-html-binding-handler",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "homepage": "https://github.com/cbcrc/koco-untrusted-html-binding-handler",
   "authors": [
     "David D'Amico <david.damico@cbc.ca>"
