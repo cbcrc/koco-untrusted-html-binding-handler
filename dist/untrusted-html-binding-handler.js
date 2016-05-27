@@ -8,9 +8,9 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _stringUtilities = require('string-utilities');
+var _kocoStringUtilities = require('koco-string-utilities');
 
-var _stringUtilities2 = _interopRequireDefault(_stringUtilities);
+var _kocoStringUtilities2 = _interopRequireDefault(_kocoStringUtilities);
 
 var _i18next = require('i18next');
 
@@ -30,7 +30,7 @@ _knockout2.default.bindingHandlers.untrustedHtml = {
         var settings = _jquery2.default.extend({}, defaultSettings, incomingSettings);
 
         _knockout2.default.bindingHandlers.html.update(element, function () {
-            var su = _stringUtilities2.default;
+            var su = _kocoStringUtilities2.default;
             var text = _knockout2.default.unwrap(value.text);
             var santitizedValue = text ? su.stripHtmlFromText(text) : settings.defaultText;
             var trimmedValue = su.trimRight(santitizedValue);
